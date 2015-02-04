@@ -6,6 +6,8 @@
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Display the information pane of a public-facing book view in the catalog.
+ *
+ * Test: content and download in same tab (by Simon A. Frank)
  *}
 
 <script type="text/javascript">
@@ -29,8 +31,10 @@
 	<div id="bookInfoTabs">
 		<ul>
 			<li><a href="#abstractTab">{translate key="submission.synopsis"}</a></li>
-			{if $publishedMonograph->getWorkType() == WORK_TYPE_EDITED_VOLUME && $chapters|@count != 0}<li><a href="#contentsTab">{translate key="common.contents"}</a></li>{/if}
-			{if $availableFiles|@count != 0}<li><a href="#downloadTab">{translate key="submission.download"}</a></li>{/if}
+			{if $publishedMonograph->getWorkType() == WORK_TYPE_EDITED_VOLUME && $chapters|@count != 0}<li><a href="#contentsTab">{translate key="common.contents"} &amp; {translate key="submission.download"}</a></li>{/if}
+			{*	Download-Tab deactivated 
+				{if $availableFiles|@count != 0}<li><a href="#downloadTab">{translate key="submission.download"}</a></li>{/if} 
+			*}
 			{call_hook|assign:"sharingCode" name="Templates::Catalog::Book::BookInfo::Sharing"}
 			{if !is_null($sharingCode) || !empty($blocks)}
 				<li><a href="#sharingTab">{translate key="submission.sharing"}</a></li>
@@ -57,11 +61,24 @@
 						{if $chapter->getLocalizedSubtitle() != '' }<br />{$chapter->getLocalizedSubtitle()}{/if}
 						{assign var=chapterAuthors value=$chapter->getAuthorNamesAsString()}
 						<div class="authorName">{$chapterAuthors}</div>
+						<div>
+							{assign var=publicationFormats value=$publishedMonograph->getPublicationFormats()}
+							{assign var=currency value=$currentPress->getSetting('currency')}
+							{if !$loggedInUsername}<p>{translate key="catalog.loginRequiredForPayment"}</p>{/if}
+							{foreach from=$publicationFormats item=publicationFormat}
+								{if $publicationFormat->getIsAvailable()}
+									{include file="catalog/book/bookFilesContentAndDownload.tpl" availableFile=$availableFile publicationFormatId=$publicationFormat->getId() publishedMonograph=$publishedMonograph currency=$currency chapterTitle=$chapter->getLocalizedTitle()}
+								{/if}
+							{/foreach}							
+						</div>
 					</p>
 				{/foreach}
 			</div>
 		{/if}
+
+{* deactivated (now included in Content)
 		{if $availableFiles|@count != 0}
+		
 		<div id="downloadTab">
 			{assign var=publicationFormats value=$publishedMonograph->getPublicationFormats()}
 			{assign var=currency value=$currentPress->getSetting('currency')}
@@ -86,9 +103,10 @@
 						</div>
 					{/if}
 				{/foreach}
-			{/if}{* useCollapsedView *}
+			{/if}
 		</div>
 		{/if}
+*}
 		{if !is_null($sharingCode) || !empty($blocks)}
 			<div id="sharingTab">
 				{$sharingCode}
