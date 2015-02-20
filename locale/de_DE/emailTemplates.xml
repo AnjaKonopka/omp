@@ -10,5 +10,7 @@
   * locale information: https://pkp.sfu.ca/wiki/index.php?title=OMP:_German_%28de_DE%29
   -->
 <email_texts locale="de_DE">
-<email_text></email_text>
+<email_text key="AUDITOR_REQUEST">
+		<subject>Manuscript Audit Request</subject>
+</email_text>
 </email_texts>

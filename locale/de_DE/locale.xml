@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE locale SYSTEM "../../lib/pkp/dtd/locale.dtd">
 
 <!--
@@ -35,7 +35,7 @@
 	<message key="monograph.publicationFormat.imprint">Impressum (Marken-/Verlagsname)</message>
 	<message key="monograph.publicationFormat.pageCounts">Seitenanzahl</message>
 	<message key="monograph.publicationFormat.frontMatterCount">Titelei</message>
-	<message key="monograph.publicationFormat.backMatterCount">Nachspann</message>
+	<message key="monograph.publicationFormat.backMatterCount">Anhang</message>
 	<message key="monograph.publicationFormat.productComposition">Produktzusammensetzung</message>
 	<message key="monograph.publicationFormat.productFormDetailCode">Produktangaben (nicht erforderlich)</message>
 	<message key="monograph.publicationFormat.productIdentifierType">Produktcode</message>
@@ -68,7 +68,7 @@
 	<message key="monograph.publicationFormat.missingONIXFields">Einige Metadatenfelder wurden nicht ausgefüllt.</message>
 
 	<message key="monograph.publicationFormat.formatDoesNotExist"><![CDATA[<p>Das von Ihnen gewählte Format steht für diese Monografie nicht mehr zur Verfügung.</p>]]></message>
-	<message key="monograph.publicationFormat.openTab">Öffne Reiter Publikationsform.</message>
+	<message key="monograph.publicationFormat.openTab">Öffne Reiter Format.</message>
 	<!-- assigned publication format grid and form keys -->
 	<message key="grid.catalogEntry.publicationFormatType">Format</message>
 	<message key="grid.catalogEntry.nameRequired">Eine Namensangabe ist erforderlich.</message>
@@ -130,7 +130,7 @@
 	<message key="grid.catalogEntry.agentsCategory">Vertreter/innen</message>
 	<message key="grid.catalogEntry.suppliersCategory">Dienstleister</message>
 	<message key="grid.catalogEntry.agent">Vertreter/in</message>
-	<message key="grid.catalogEntry.agentTip">Sie können eine/n Vertreter/in bestimmen, um Sie in dem ausgewählten Gebiet zu repräsentieren. Diese Angabe ist nicht verpflichtend.</message>
+	<message key="grid.catalogEntry.agentTip">Sie können einen Vertreter bestimmen, der Sie in dem ausgewählten Gebiet repräsentiert. Diese Angabe ist optional.</message>
 	<message key="grid.catalogEntry.supplier">Dienstleister</message>
 	<message key="grid.catalogEntry.representativeRoleChoice">Wählen Sie eine Funktion:</message>
 	<message key="grid.catalogEntry.representativeRole">Funktion</message>
@@ -150,7 +150,7 @@
 	<!-- Spotlights management -->
 	<message key="spotlight.spotlights">Spotlights</message>
 	<message key="spotlight.noneExist">Aktuell sind keine Spotlights vorhanden</message>
-	<message key="spotlight.title.homePage">Im Rampenlicht</message>
+	<message key="spotlight.title.homePage">Im Spotlight</message>
 	<message key="spotlight.author">Autor,</message>
 	<message key="grid.content.spotlights.spotlightItemTitle">Spotlight-Titel</message>
 	<message key="grid.content.spotlights.category.homepage">Homepage</message>
@@ -343,13 +343,13 @@
 	<!-- Registration -->
 	<message key="user.register.completeForm">Füllen Sie das Formular aus, um sich beim Verlag zu registrieren</message>
 	<message key="user.register.selectContext">Wählen Sie den Verlag aus, bei dem Sie sich registrieren möchten</message>
-	<message key="user.register.noContexts">Es gibt keine Verlage, bei denen Sie sich auf dieser Website anmelden können.</message>
+	<message key="user.register.noContexts">Es gibt keinen Verlage, bei dem Sie sich auf dieser Website anmelden können.</message>
 	<message key="user.register.privacyStatement">Datenschutzerklärung</message>
 	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klicken Sie hier</a>, wenn Sie bereits registriert sind.]]></message>
 	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klicken Sie hier</a>, wenn Sie sich noch <strong>nicht</strong> bei diesem oder einem anderen Verlag dieser Website registriert haben.]]></message>
 	<message key="user.register.loginToRegister">Geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich zu registrieren.</message>
 	<message key="user.register.registrationDisabled">Zurzeit ist keine Registrierung möglich.</message>
-	<message key="user.register.form.passwordLengthTooShort">Das Passwort, das Sie eingegeben haben, ist nicht lang genug.not long enough.</message>
+	<message key="user.register.form.passwordLengthTooShort">Das Passwort, das Sie eingegeben haben, ist nicht lang genug.</message>
 	<message key="user.register.readerDescription">Per E-Mail über das Erscheinen eines Buches benachrichtigt.</message>
 	<message key="user.register.authorDescription">Kann einen Titel beim Verlag einreichen.</message>
 	<message key="user.register.reviewerDescriptionNoInterests">Ich bin bereit, beim Verlag eingegangene Manuskripte zu begutachten.</message>
@@ -363,8 +363,8 @@
 	<!-- About The Press -->
 	<message key="about.pressContact">Pressekontakt</message>
 	<message key="about.aboutThePress">Über den Verlag</message>
-	<message key="about.editorialTeam">Herausgeber/innen</message>
-	<message key="about.editorialPolicies">Richtlinien für Herausgeber/innen</message>
+	<message key="about.editorialTeam">Redaktion</message>
+	<message key="about.editorialPolicies">Die Leitlinien unseres Verlages</message>
 	<message key="about.focusAndScope">Fokus und Umfang</message>
 	<message key="about.seriesPolicies">Richtlinien für Reihen und Kategorien</message>
 	<message key="about.submissions">Manuskripte einreichen</message>
@@ -426,7 +426,7 @@
 Ihr Server untersützt aktuell mbstring: <strong>{$supportsMBString}</strong>]]></message>
 	<message key="installer.allowFileUploads"><![CDATA[Ihr Server erlaubt aktuell die Datei-Uploads: <strong>{$allowFileUploads}</strong>]]></message>
 	<message key="installer.maxFileUploadSize"><![CDATA[Ihr Server erlaubt aktuell das Hochladen von Dateien bis zu einer maximalen Dateigröße von: <strong>{$maxFileUploadSize}</strong>]]></message>
-	<message key="installer.localeInstructions">Die Sprache, die Hauptsprache in Ihrem System sein soll. Bitte konsultieren Sie die OMP-Dokumentation, wenn Sie an der Unterstützung einer Sprache interessiert sind, die hier nicht aufgeführt ist.</message>
+	<message key="installer.localeInstructions">Die Sprache, die die Hauptsprache Ihres Systems sein soll. Bitte konsultieren Sie die OMP-Dokumentation, wenn Sie an der Unterstützung einer Sprache interessiert sind, die hier nicht aufgeführt ist.</message>
 	<message key="installer.additionalLocalesInstructions">Wählen Sie weitere Sprachen aus, die in diesem System unterstützt werden sollen. Verlage, die auf dieser Website gehostet sind, können diese Sprachen verwenden. Weitere Sprachen können ebenfalls jederzeit installiert werden, und zwar über das Website-Administration-Interface. Mit * markierte Regionaleinstellungen sind unter Umständen unvollständig.</message>
 	<message key="installer.filesDirInstructions"><![CDATA[Geben Sie den vollständigen Pfadnamen zu einem bestehenden Verzeichnis an, in dem die hochgeladenen Dateien abgelegt werden sollen. Auf dieses Verzeichnis sollte kein direkter Zugriff von außen (vom Web aus) möglich sein. <strong>Bitte stellen Sie sicher, dass das Verzeichnis bereits existiert und es beschreibbar ist, bevor Sie mit der Installation beginnen.</strong> Für Windows-Pfadnamen sind Schrägstriche zu verwenden, z.B. "C:/mypress/files".]]></message>
 	<message key="installer.databaseSettingsInstructions">Um die Daten ablegen zu können, benötigt OMP einen Zugriff auf eine SQL-Datenbank. Bitte beachten Sie die oben genannten Systemanforderungen für die aufgeführten unterstützten Datenbanken. In den darunter stehenden Feldern werden die Einstellungen angegeben, die zur Verbindung mit der Datenbank gesetzt werden müssen.</message>
@@ -502,8 +502,8 @@ Ihr Server untersützt aktuell mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="notification.type.approveSubmissionTitle">Warten auf Freigabe.</message>
 	<message key="notification.type.formatNeedsApprovedSubmission">Damit das Format in den Katalog aufgenommen werden kann, müssen Sie die Metadaten für den Katalogeintrag akzeptieren. Aktivieren Sie dazu auf diesem Reiter die Checkbox "Übernehme die Metadaten für dieses Format in den Katalog". Wechseln Sie anschließend auf den Reiter 'Monografie' und aktvieren dort die Checkbox 'Erstelle anhand der angegebenen Metadaten einen neuen Katalogeintrag'.</message>
 	<message key="notification.type.configurePaymentMethod.title">Es wurde noch keine Zahlungsweise konfiguriert.</message>
-	<message key="notification.type.configurePaymentMethod">Bevor Sie die E-Commerce-Einstellungen definieren können, müssen Sie zunächst eine Zahlungsweise konfigurieren.</message>
-	<message key="notification.type.visitCatalog">Die eingereichte Monografie wurde akzeptiert. Bitte gehen Sie zum Katalog, um dort genauere Angaben zum Buch zu machen. Den Link zum Katalog befindet sich oberhalb dieses Dialogfeldes.</message>
+	<message key="notification.type.configurePaymentMethod">Um die E-Commerce-Einstellungen definieren zu können, müssen Sie zunächst eine Zahlungsweise konfigurieren.</message>
+	<message key="notification.type.visitCatalog">Die eingereichte Monografie wurde akzeptiert. Bitte gehen Sie zum Katalog, um dort genauere Angaben zum Buch zu machen. Der Link zum Katalog befindet sich oberhalb dieses Dialogfeldes.</message>
 	<message key="notification.type.visitCatalogTitle">Katalogverwaltung</message>
 
 	<!-- Authorization -->
@@ -514,8 +514,8 @@ Ihr Server untersützt aktuell mbstring: <strong>{$supportsMBString}</strong>]]>
 	<message key="user.authorization.invalidMonograph">Ungültiges Buch oder kein Buch angefordert!</message>
 	<message key="user.authorization.noContext">Kein Verlag im Kontext!</message>
 	<message key="user.authorization.seriesAssignment">Sie versuchen, auf eine Monografie zuzugreifen, die nicht mehr zu Ihrer Reihe gehört.</message>
-	<message key="user.authorization.workflowStageAssignmentMissing">Zugriff verweigert! Sie sind nicht für dieses Stadium des Publikationsprozesses freigeschaltet.</message>
-	<message key="user.authorization.workflowStageSettingMissing">Zugriff verweigert! Die Benutzer/innengruppe, in der Sie aktuell aktiv sind, ist nicht mit dieser Phase des Publikationsprozesses befasst. Bitte überprüfen Sie Ihre Einstellungen.</message>
+	<message key="user.authorization.workflowStageAssignmentMissing">Zugriff verweigert! Sie sind nicht für diese Phase des Publikationsprozesses freigeschaltet.</message>
+	<message key="user.authorization.workflowStageSettingMissing">Zugriff verweigert! Die Benutzergruppe, in der Sie aktuell aktiv sind, ist nicht mit dieser Phase des Publikationsprozesses befasst. Bitte überprüfen Sie Ihre Einstellungen.</message>
 
 	<message key="payment.directSales">Download von der Verlagswebseite</message>
 	<message key="payment.directSales.price">Preis</message>
